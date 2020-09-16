@@ -1,6 +1,6 @@
 
 \documentclass{article}
-
+\usepackage{listings}
 \usepackage[spanish]{babel}
 
 
@@ -12,7 +12,7 @@
 \maketitle
 
 \section{Introducci\'{o}n}
-El movimiento Browniano es un modelo matem\'{a}tico de una part\'{i}cula que describe la danza aleatoria de las part\'{i}culas que se debe a la agitaci\'{o}n molecular en la que se hayan inmersas.
+El movimiento Browniano es un modelo matem\'{a}tico de una part\'{i}cula que describe la ``danza'' aleatoria de las part\'{i}culas que se debe a la agitaci\'{o}n molecular en la que se hayan inmersas.
 
 En este trabajo los objetivos principales son modelar sistem\'{a}ticamente el movimiento browniano de una part\'{i}cula de una a ocho dimensiones del espacio, as\'{i} como tambi\'{e}n examinar el tiempo de regreso al origen de la part\'{i}cula analizando su caminata pseudoaleatoria.
 
@@ -24,8 +24,11 @@ Simular el movimiento Browniano de una part\'{i}cula examinando los efectos de l
 
 La simulaci\'{o}n del movimiento Browniano se realizo con lenguaje de programaci\'{o}n python que es el siguiente codigo.Este da como resultado los pasos que toma la particula al llegar al origen.
 
+\begin{lstlisting}[language=python]
 
-dim = n # 1 a 8
+from random iport random
+
+dim = n # 1 A 8 USANDO 3 DIMENSIONES PARA LOS RESULTADOS
 largo = 1024
 pasitos = 0
 milis = 0
@@ -50,7 +53,7 @@ def experimento(largo, dim, pasitos, milis):
             return milis
 
 
-  
+\end{lstlisting}  
 
 for replicas in range (corridas):
 experimento(largo, dim, pasitos, milis)
@@ -131,7 +134,7 @@ fin
 
 
 \section{Conclusiones}
-Cuando las dimenciones son menores de 1 a 4 la probalidad es de 0.9 a 0.2 de pasar por el origen as\'{i} que el tiempo o paso por el origen es mayor, pero ariba de la dimencion 5 la probabilidas es casi nula y los pasos por el origen tambien lo son, por lo tanto se puede definir que el tiempo de regreso al origen es infinito.
+Cuando las dimenciones son menores de 1 a 4 la probalidad exs de 0.9 a 0.2 de pasar por el origen as\'{i} que el tiempo o paso por el origen es mayor, pero ariba de la dimencion 5 la probabilidas es casi nula y los pasos por el origen tambien lo son, por lo tanto se puede definir que el tiempo de regreso al origen es infinito. Para los resultados se uso 3 dimensiones obrervando que regresa al origen 20 veces con tiempos o pasas de 2 hasta 938.
 
 
 \end{document}

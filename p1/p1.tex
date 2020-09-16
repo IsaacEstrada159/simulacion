@@ -1,6 +1,6 @@
 
 \documentclass{article}
-
+\usepackage{listings}
 \usepackage[spanish]{babel}
 
 
@@ -12,7 +12,7 @@
 \maketitle
 
 \section{Introducci\'{o}n}
-El movimiento Browniano es un modelo matem\'{a}tico de una part\'{i}cula que describe la danza aleatoria de las part\'{i}culas que se debe a la agitaci\'{o}n molecular en la que se hayan inmersas.
+El movimiento Browniano es un modelo matem\'{a}tico de una part\'{i}cula que describe la ``danza'' aleatoria de las part\'{i}culas que se debe a la agitaci\'{o}n molecular en la que se hayan inmersas.
 
 En este trabajo los objetivos principales son modelar sistem\'{a}ticamente el movimiento browniano de una part\'{i}cula de una a ocho dimensiones del espacio, as\'{i} como tambi\'{e}n examinar el tiempo de regreso al origen de la part\'{i}cula analizando su caminata pseudoaleatoria.
 
@@ -24,6 +24,9 @@ Simular el movimiento Browniano de una part\'{i}cula examinando los efectos de l
 
 La simulaci\'{o}n del movimiento Browniano se realizo con lenguaje de programaci\'{o}n python que es el siguiente codigo.Este da como resultado los pasos que toma la particula al llegar al origen.
 
+\begin{lstlisting}[language=python]
+
+from random iport random
 
 dim = n # 1 A 8 USANDO 3 DIMENSIONES PARA LOS RESULTADOS
 largo = 1024
@@ -48,13 +51,13 @@ def experimento(largo, dim, pasitos, milis):
             print(milis)
             pasitos = 0
             return milis
-
-
   
 
 for replicas in range (corridas):
 experimento(largo, dim, pasitos, milis)
 print ("fin")
+
+\end{lstlisting}
 
 Resultados
 
