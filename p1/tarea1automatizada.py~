@@ -1,6 +1,6 @@
 from random import random, randint
 
-dim = 1
+dim = 8
 largo = 1024
 pasitos = 0
 milis = 0
