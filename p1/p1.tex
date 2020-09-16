@@ -23,7 +23,9 @@ Simular el movimiento Browniano de una part\'{i}cula examinando los efectos de l
 \section{Simulaci\'{o}n y resultados}
 
 La simulaci\'{o}n del movimiento Browniano se realizo con lenguaje de programaci\'{o}n python que es el siguiente codigo.Este da como resultado los pasos que toma la particula al llegar al origen.
-dim = n # 1 a 8
+
+
+dim = n # 1 A 8 USANDO 3 DIMENSIONES PARA LOS RESULTADOS
 largo = 1024
 pasitos = 0
 milis = 0
@@ -34,6 +36,8 @@ def paso(pos, dim):
     pos[d]+= -1 if random() < 0.5 else 1
     return pos
 
+    
+
 def experimento(largo, dim, pasitos, milis):
     pos = [0] * dim
     for t in range(largo):
@@ -43,7 +47,10 @@ def experimento(largo, dim, pasitos, milis):
             milis = pasitos
             print(milis)
             pasitos = 0
-    return milis
+            return milis
+
+
+  
 
 for replicas in range (corridas):
 experimento(largo, dim, pasitos, milis)
@@ -51,9 +58,80 @@ print ("fin")
 
 Resultados
 
+fin
+fin
+fin
+fin
+822
+fin
+fin
+fin
+fin
+2
+fin
+938
+2
+fin
+fin
+fin
+fin
+2
+4
+114
+fin
+fin
+fin
+6
+2
+10
+16
+fin
+66
+fin
+fin
+2
+2
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+100
+fin
+fin
+fin
+fin
+fin
+14
+fin
+fin
+fin
+fin
+4
+fin
+fin
+fin
+fin
+2
+fin
+2
+fin
+fin
+fin
+fin
+fin
+2
+fin
+
 
 \section{Conclusiones}
-Cuando las dimenciones son menores de 1 a 4 la probalidad es de 0.9 a 0.2 de pasar por el origen as\'{i} que el tiempo o paso por el origen es mayor, pero ariba de la dimencion 5 la probabilidas es casi nula y los pasos por el origen tambien lo son, por lo tanto se puede definir que el tiempo de regreso al origen es infinito.
+Cuando las dimenciones son menores de 1 a 4 la probalidad exs de 0.9 a 0.2 de pasar por el origen as\'{i} que el tiempo o paso por el origen es mayor, pero ariba de la dimencion 5 la probabilidas es casi nula y los pasos por el origen tambien lo son, por lo tanto se puede definir que el tiempo de regreso al origen es infinito. Para los resultados se uso 3 dimensiones obrervando que regresa al origen 20 veces con tiempos o pasas de 2 hasta 938.
 
 
 \end{document}

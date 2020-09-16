@@ -22,8 +22,116 @@ Es posible que la probabilidad sea nula conforme las dimensiones vayan aumentand
 Simular el movimiento Browniano de una part\'{i}cula examinando los efectos de la dimensi\'{o}n en el tiempo de regreso al origen, as\'{i} como tambi\'{e}n la probabilidad para dimensiones de 1 a 8 en incrementos lineales de uno, variando el n\'{u}mero de pasos de la caminata como potencias de dos con exponentes de 5 a 10 en incrementos lineales de uno, con 50 repeticiones del experimento para cade combinaci\'{o}n. 
 \section{Simulaci\'{o}n y resultados}
 
-\section{Conclusiones}
+La simulaci\'{o}n del movimiento Browniano se realizo con lenguaje de programaci\'{o}n python que es el siguiente codigo.Este da como resultado los pasos que toma la particula al llegar al origen.
 
-\section{Anexo}
+
+dim = n # 1 a 8
+largo = 1024
+pasitos = 0
+milis = 0
+corridas = 50
+
+def paso(pos, dim):
+    d = randint(0, dim-1)
+    pos[d]+= -1 if random() < 0.5 else 1
+    return pos
+
+    
+
+def experimento(largo, dim, pasitos, milis):
+    pos = [0] * dim
+    for t in range(largo):
+        pos = paso(pos, dim)
+        pasitos = pasitos + 1
+        if  all([p == 0 for p in pos]):
+            milis = pasitos
+            print(milis)
+            pasitos = 0
+            return milis
+
+
+  
+
+for replicas in range (corridas):
+experimento(largo, dim, pasitos, milis)
+print ("fin")
+
+Resultados
+
+fin
+fin
+fin
+fin
+822
+fin
+fin
+fin
+fin
+2
+fin
+938
+2
+fin
+fin
+fin
+fin
+2
+4
+114
+fin
+fin
+fin
+6
+2
+10
+16
+fin
+66
+fin
+fin
+2
+2
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+fin
+100
+fin
+fin
+fin
+fin
+fin
+14
+fin
+fin
+fin
+fin
+4
+fin
+fin
+fin
+fin
+2
+fin
+2
+fin
+fin
+fin
+fin
+fin
+2
+fin
+
+
+\section{Conclusiones}
+Cuando las dimenciones son menores de 1 a 4 la probalidad es de 0.9 a 0.2 de pasar por el origen as\'{i} que el tiempo o paso por el origen es mayor, pero ariba de la dimencion 5 la probabilidas es casi nula y los pasos por el origen tambien lo son, por lo tanto se puede definir que el tiempo de regreso al origen es infinito.
+
 
 \end{document}
