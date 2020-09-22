@@ -4,6 +4,7 @@
   title = {Conversaci{\'{o}}n en vivo durante clase}
 }
 
+
 @misc{mov,
  author = {Puga Cital, E.},
  title = {Difuci{\'{o}}n efectiva en sistemas de materia activa diluida},
@@ -11,8 +12,9 @@
  month = jun
 }
 
+
 @misc{elis,
- author = {Schaeffer, E.},
+ author =  {Schaeffer , E.},
  title = {Pr{\'a}ctica 1: {M}ovimiento {B}rowniano},
  url = {https://elisa.dyndns-web.com/teaching/comp/par/p1.html},
  year = 2020,
