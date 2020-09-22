@@ -13,7 +13,7 @@
 \maketitle
 
 \section{Introducci\'{o}n}
-El movimiento Browniano es un modelo matem\'{a}tico de una part\'{i}cula que describe la "danza'' aleatoria de las part\'{i}culas que se debe \citep{mov} a la agitaci\'{o}n molecular en la que se hayan inmersas.
+El movimiento Browniano es un modelo matem\'{a}tico de una part\'{i}cula que describe la "danza'' aleatoria de las part\'{i}culas que se debe \citet{mov} a la agitaci\'{o}n molecular en la que se hayan inmersas.
 
 En este trabajo los objetivos principales son modelar sistem\'{a}ticamente el movimiento browniano de una part\'{i}cula de una a ocho dimensiones del espacio, as\'{i} como tambi\'{e}n examinar el tiempo de regreso al origen de la part\'{i}cula analizando su caminata pseudoaleatoria.
 

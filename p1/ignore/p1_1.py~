@@ -1,0 +1,54 @@
+from random import random, randint
+import numpy as np
+import matplotlib.pyplot as plt
+
+corridas = 200
+pasitos = 0
+milis = 0
+
+def paso(pos, dim):
+    d = randint(0, dim-1)
+    pos[d]+= -1 if random() < 0.5 else 1
+    return pos
+
+def experimento(largo, dim, pasitos, milis):
+    pos = [0] * dim
+    for t in range(largo):
+        pos = paso(pos, dim)
+        pasitos = pasitos + 1
+        if  all([p == 0 for p in pos]):
+            milis = pasitos
+            pasitos = 0
+            break
+    return milis
+
+for dim in range(1,9):
+    data = [0]
+    largo = [32, 64, 128, 256, 512, 1024]
+    for largo in largo:
+        for replicas in range (corridas):
+            data += [experimento(largo, dim, pasitos, milis)]
+    if dim == 1:
+        dim1 = data
+    elif dim == 2:
+        dim2 = data
+    elif dim == 3:
+        dim3 = data
+    elif dim == 4:
+        dim4 = data
+    elif dim == 5:
+        dim5 = data
+    elif dim == 6:
+        dim6 = data
+    elif dim == 7:
+        dim7 = data
+    elif dim == 8:
+        dim8 = data
+
+        
+plt.yscale('log')        
+plt.boxplot([dim1, dim2, dim3, dim4, dim5, dim6, dim7, dim8])
+plt.xlabel('Dimensiones')
+plt.ylabel('Pasos')
+plt.show()
+plt.close()

@@ -1,0 +1,59 @@
+from random import random, randint
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.ticker import MultipleLocator, FormatStrFormatter
+
+corridas = 50
+pasitos = 0
+milis = 0
+
+
+def paso(pos, dim):
+    d = randint(0, dim-1)
+    pos[d]+= -1 if random() < 0.5 else 1
+    return pos
+
+def experimento(largo, dim, pasitos, milis):
+    pos = [0] * dim
+    for t in range(largo):
+        pos = paso(pos, dim)
+        pasitos = pasitos + 1
+        if  all([p == 0 for p in pos]):
+            milis = pasitos
+            pasitos = 0
+            break
+    return milis
+
+for dim in range(1,9):
+    r = [0]
+    largo = [32, 64, 128, 256, 512, 1024]
+    for largo in largo:
+        for replicas in range (corridas):
+            r += [experimento(largo, dim, pasitos, milis)]
+    if dim == 1:
+        D1 = r
+    elif dim == 2:
+        D2 = r
+    elif dim == 3:
+        D3 = r
+    elif dim == 4:
+        D4 = r
+    elif dim == 5:
+        D5 = r
+    elif dim == 6:
+        D6 = r
+    elif dim == 7:
+        D7 = r
+    elif dim == 8:
+        D8 = r
+
+        
+plt.yscale('log')        
+ax = plt.gca()
+ax.set_ylim([0,1024])
+
+
+plt.boxplot([D1, D2, D3, D4, D5, D6, D7, D8])
+
+plt.show()
+plt.close()

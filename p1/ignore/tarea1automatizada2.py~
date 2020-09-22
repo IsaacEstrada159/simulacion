@@ -1,28 +1,32 @@
 
 from random import random, randint
 
-dim = 3
-largo = 1024
-pasitos = 0
-milis = 0
-corridas = 50
+dim = 1
+largo = 32
+corridas = 5
 
 def paso(pos, dim):
     d = randint(0, dim-1)
     pos[d]+= -1 if random() < 0.5 else 1
     return pos
 
-def experimento(largo, dim, pasitos, milis):
+def experimento(largo, dim):
     pos = [0] * dim
     for t in range(largo):
         pos = paso(pos, dim)
-        pasitos = pasitos + 1
         if  all([p == 0 for p in pos]):
-            milis = pasitos
-            print(milis)
-            break
-    return milis
+            return t+1
+    return (inf) 
 
 for replicas in range (corridas):
-    experimento(largo, dim, pasitos, milis)
-    print ("infinito")
+    resultado =  experimento(largo, dim)
+    if resultado is not (inf):
+        print(resultado)
+    else:
+        print("inf")
+
+
+
+        
+
+

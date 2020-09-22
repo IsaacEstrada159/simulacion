@@ -1,0 +1,20 @@
+@misc{otra,
+  author = {{Mis amigos en Discord}},
+  year = 2020,
+  title = {Conversaci{\'{o}}n en vivo durante clase}
+}
+
+@misc{mov,
+ author = {Puga Cital, E.},
+ title = {Difuci{\'{o}}n efectiva en sistemas de materia activa diluida},
+ year = 2017,
+ month = jun
+}
+
+@misc{elis,
+ author = {Schaeffer, E.},
+ title = {Pr{\'a}ctica 1: {M}ovimiento {B}rowniano},
+ url = {https://elisa.dyndns-web.com/teaching/comp/par/p1.html},
+ year = 2020,
+ month = sep
+}
