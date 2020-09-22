@@ -30,7 +30,7 @@ La simulaci\'{o}n del movimiento Browniano se realizo con lenguaje de programaci
 En la figura \ref{fig} se muestran los resultados obtenidos donde se puede observar una tendencia decreciente de regresos al origen conforme aumentan las dimenciones.
 
 
-\begin{figure}
+\begin{figure}[!H]
   \centering\includegraphics[width=0.9\textwidth]{p1_2.png}
   \caption{Regresos al origen de una part\'{i}cula simulado sistematicamente por modelo del movimiento Browniano.}
   \label{fig}
