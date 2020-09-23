@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.8)  22 SEP 2020 04:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.8)  23 SEP 2020 12:39
 entering extended mode
 **./p1.tex
 (p1.tex
@@ -103,4 +103,73 @@ LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
-LaTe
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Info: Redefining \. on input line 9.
+LaTeX Info: Redefining \% on input line 9.
+
+(C:\Users\isest\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count180
+\scratchdimen=\dimen138
+\scratchbox=\box46
+\nofMPsegments=\count181
+\nofMParguments=\count182
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count183
+\MPscratchDim=\dimen139
+\MPnumerator=\count184
+\makeMPintoPDFobject=\count185
+\everyMPtoPDFconversion=\toks18
+)
+(C:\Users\isest\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 11.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 11.
+
+! I can't write on file `p1.pdf'.
+Please type another file name for output: 
+[1
+
+{C:/Users/isest/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+<p1_2.png, id=9, 462.528pt x 346.896pt>
+File: p1_2.png Graphic file (type png)
+<use p1_2.png>
+Package pdftex.def Info: p1_2.png  used on input line 32.
+(pdftex.def)             Requested size: 310.4979pt x 232.8849pt.
+ (p1.bbl)
+[2 <./p1_2.png>] (p1.aux
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+) ) 
+Here is how much of TeX's memory you used:
+ 2610 strings out of 480790
+ 37076 string characters out of 2897302
+ 290392 words of memory out of 3000000
+ 18635 multiletter control sequences out of 15000+200000
+ 536146 words of font info for 37 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 30i,7n,35p,484b,361s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/isest/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb><C:/Users/isest/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmr10.pfb><C:/Users/isest/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmr12.pfb><C:/Users/isest/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/isest/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on .pdf (2 pages, 88738 bytes).
+PDF statistics:
+ 32 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
