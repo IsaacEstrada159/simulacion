@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Schaeffer(2020)]{elis}
+Elisa Schaeffer.
+\newblock Pr{\'a}ctica 2: aut{\'o}mata celular, September 2020.
+\newblock URL \url{https://elisa.dyndns-web.com/teaching/comp/par/p2.html}.
+
+\end{thebibliography}

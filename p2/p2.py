@@ -36,12 +36,13 @@ if __name__ == "__main__":
    # fig.suptitle('Estado inicial')
    # plt.savefig('p2_t0_p.png')
    # plt.close()
-    for iteracion in range(16):
-       # print("Iter", iteracion)
+    for iteracion in range(50):
+       #print("Iter", iteracion)
+        
         valores = [paso(x) for x in range(num)]
         vivos = sum(valores)
         val.append(vivos)
-        # print(iteracion, vivos)
+        print(iteracion, vivos)
         if vivos == 0:
             print('# Ya no queda nadie vivo.')
             print(val)
@@ -55,11 +56,11 @@ if __name__ == "__main__":
         #plt.close()
     print('# Alguna celula vivio')
     print(val)
-    h = np.arange(0, 3,1)
-    y = val
+    h = np.arange(0.1, 1, 0.1)
+    y = [45, 125, 142, 172, 191, 175, 112, 54, 17]
     plt.plot(h, y)
-    plt.xlabel('Tiempo de vida')
-    plt.ylabel('Numero de celulas vivas')
-    plt.show()
+    plt.xlabel('Probabilidad')
+    plt.ylabel('colapso')
+   # plt.show()
     plt.close()
      
