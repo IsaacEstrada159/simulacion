@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.8)  8 OCT 2020 02:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.8)  8 OCT 2020 04:01
 entering extended mode
 **./p3.tex
 (p3.tex
@@ -112,7 +112,14 @@ mode.def
 File: l3backend-pdfmode.def 2020-06-29 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count187
 \l__pdf_internal_box=\box47
-) (p3.aux)
+) (p3.aux
+LaTeX Info: Redefining \. on input line 10.
+LaTeX Info: Redefining \% on input line 10.
+
+
+LaTeX Warning: Label `tabla' multiply defined.
+
+)
 \openout1 = `p3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
@@ -189,8 +196,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 \textbf{Nucleo}&\textbf{Mín.}
-                                  &\textbf{Media}&\textbf{Máx.}\\
+l.52 \textbf{Nucleo}&\textbf{Mínimo}
+                                    &\textbf{Media}&\textbf{Máximo}\\
 ? 
 
 ! Package inputenc Error: Invalid UTF-8 byte sequence.
@@ -199,31 +206,59 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 ...\textbf{Mín.}&\textbf{Media}&\textbf{Máx.}
+l.52 ...tbf{Mínimo}&\textbf{Media}&\textbf{Máximo}
                                                   \\
 ? 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-No file p3.bbl.
-[1
 
-{C:/Users/isest/AppData/Local/MiKTeX/pdftex/config/pdftex.map}] [2] (p3.aux
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 \textbf{Nucleo}&\textbf{Mínimo}
+                                    &\textbf{Media}&\textbf{Máximo}\\
+? 
+
+! Package inputenc Error: Invalid UTF-8 byte sequence.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.71 ...tbf{Mínimo}&\textbf{Media}&\textbf{Máximo}
+                                                  \\
+? 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+(p3.bbl [1
+
+{C:/Users/isest/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+Underfull \hbox (badness 1394) in paragraph at lines 9--12
+[]\OT1/cmr/m/n/10 Elisa Schaef-fer.  Practi-ca 3: teora de co-las, Oc-to-ber
+ 2020.  URL
+ []
+
+) [2] (p3.aux
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
 )
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4383 strings out of 480790
- 60196 string characters out of 2897302
- 503516 words of memory out of 3000000
- 20392 multiletter control sequences out of 15000+200000
- 536621 words of font info for 38 fonts, out of 3000000 for 9000
+ 4393 strings out of 480790
+ 60389 string characters out of 2897302
+ 506649 words of memory out of 3000000
+ 20399 multiletter control sequences out of 15000+200000
+ 536789 words of font info for 39 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,7n,42p,397b,1413s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 30i,7n,42p,396b,1413s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\isest\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1000.pk><C:/Users/isest/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
 ts/cm/cmbx10.pfb><C:/Users/isest/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -231,10 +266,11 @@ ic/amsfonts/cm/cmbx12.pfb><C:/Users/isest/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/isest/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/isest/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/isest/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on p3.pdf (2 pages, 76964 bytes).
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/isest/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on p3.pdf (2 pages, 91358 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
+ 42 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
