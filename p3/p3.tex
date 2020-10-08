@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage[spanish]{babel}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{graphicx}
+
+\title{Teor\'{i}a de colas}
+\author{Isaac Estrada Garc\'{i}a }
+
+\begin{document}
+
+\maketitle
+ 
+\section{Objetivos}
+Examinar los efectos en los tiempos \citep{elis} de ejecuci\'{o}n de los diferentes ordenamientos cambian cuando se var\'{i}a el n\'{u}mero de n\'{u}cleos asignados al cluster, ulizando como caso pr\'{a}ctico n\'{u}meros primos y no- primos como datos de entrada en un vector descargados de https://primes.utm.edu/lists/small/millions/
+
+\section{Metodolog\'{i}a y Resultados}
+Se hace uso del lenguaje de programacion Python para determinal el n\'{u}mero de nucleos del ordenador
+\begin{lstlisting}[language=python]
+>>> from multiprocessing import cpu_count
+>>> cpu_ont()
+8
+\end{lstlisting}
+
+ \ref{fig}
+
+
+
+
+\begin{figure}
+  \centering\includegraphics[width=0.9\textwidth]{.png}
+  \caption{}
+  \label{fig}
+\end{figure} 
+
+
+
+\section{Conclusi\'{o}n}
+
+
+
+\bibliography{p2}
+\bibliographystyle{plainnat}
+ 
+\end{document}
