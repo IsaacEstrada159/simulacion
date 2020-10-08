@@ -23,8 +23,7 @@ Se hace uso del lenguaje de programaci\'{o}n Python para determinal el n\'{u}mer
 8
 \end{lstlisting}
 
-
-
+ El c\'{o}digo principal empieza con una funci\'{o}n para determinar los n\'{u}meros primos y no-primos as\'{i} como sus factores.
 
 \begin{lstlisting}[language = python]
   def factor(n):
@@ -38,10 +37,11 @@ Se hace uso del lenguaje de programaci\'{o}n Python para determinal el n\'{u}mer
     return -1
 \end{lstlisting}
 
+
 Como siguiente paso se importa el archivo dataprimes.txt ubicado en el repositorio simulacion URL: https://github.com/IsaacEstrada159/simulacion/tree/master/p3 creando un vector llamado datos se paraleliza y se miden los tiempos de ejecuci\'{o}n con 10 replicas variando el n\'{u}cleos. Finalmente el c\'{o}digo imprime resultados descrimptivos de los tiempos de ejecuci\'{o}n.
  
 
-
+La \ref{tabla} muestra los resultados obtenidos, en la cual se observa una disminuci\'{o} en la mediana del tiempo conforme aumenta el n\´{u}mero de nucleos
 
 \begin{table}[h]
 \begin{center}
@@ -49,10 +49,10 @@ Como siguiente paso se importa el archivo dataprimes.txt ubicado en el repositor
 \label{tabla}
 \begin{tabular}{c c c c c c c}
 \hline
-\textbf{Nucleo}&\textbf{Mínimo}&\textbf{Media}&\textbf{Máximo}\\
+\textbf{Nucleo}&\textbf{Mín.}&\textbf{Media}&\textbf{Máx.}\\
 \hline
 1 &4.731&4.930&5.560\\
-2 &2.448&8&2.537& 3.250\\
+2 &2.448&2.537& 3.250\\
 3 &2.401&2.496&3.274\\
 4 &1.655&1.859&2.722\\
 \hline

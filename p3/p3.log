@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.8)  8 OCT 2020 02:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.6.29) (preloaded format=pdflatex 2020.9.8)  8 OCT 2020 02:50
 entering extended mode
 **./p3.tex
 (p3.tex
@@ -173,9 +173,9 @@ File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 33.
+(Font)              <7> on input line 32.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 33.
+(Font)              <5> on input line 32.
 
 Overfull \hbox (41.47305pt too wide) in paragraph at lines 41--42
 \OT1/cmr/m/n/10 si-to-rio si-mu-la-cion URL: https://github.com/IsaacEstrada159
@@ -189,8 +189,8 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 \textbf{Nucleo}&\textbf{Mínimo}
-                                    &\textbf{Media}&\textbf{Máximo}\\
+l.52 \textbf{Nucleo}&\textbf{Mín.}
+                                  &\textbf{Media}&\textbf{Máx.}\\
 ? 
 
 ! Package inputenc Error: Invalid UTF-8 byte sequence.
@@ -199,7 +199,7 @@ See the inputenc package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.52 ...tbf{Mínimo}&\textbf{Media}&\textbf{Máximo}
+l.52 ...\textbf{Mín.}&\textbf{Media}&\textbf{Máx.}
                                                   \\
 ? 
 
@@ -232,7 +232,7 @@ ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/isest/AppData/Local/Programs/MiKTe
 X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/isest/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/isest/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on p3.pdf (2 pages, 76837 bytes).
+Output written on p3.pdf (2 pages, 76964 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
