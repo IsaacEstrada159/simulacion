@@ -43,7 +43,7 @@ if __name__ == "__main__":
                     tiempo = 1000 * (time() - start)
                     if replica > 0:
                         #print(f'{replica},{trabajadores},{tiempo}')
-        datos = pd.DataFrame(data, columns = [f'tiempo'])
+        datos = pd.DataFrame(data, columns = ['tiempo'])
         #print(datos) 
                         
 
