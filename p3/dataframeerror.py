@@ -3,6 +3,7 @@ from math import sqrt, ceil
 from random import randint, random, shuffle
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 def primo(n):
     if n < 4: # 1 2 3
         return True
@@ -15,6 +16,7 @@ def primo(n):
 
 dificiles = []
 data = []
+datos = []
 meta = 10
 faciles = [randint(1000, 15000) for i in range(meta)]
 while len(dificiles) < meta:
@@ -32,7 +34,7 @@ if __name__ == "__main__":
     cr = c2.copy()
     shuffle(cr)
     ordenes = {'fp': c1, 'dp': c2, 'oa': cr}
-    for trabajadores in range(1, 5):
+    for trabajadores in range(1, 9):
         with Pool(trabajadores) as p:
             for o in ordenes:
                 label = o
@@ -41,11 +43,13 @@ if __name__ == "__main__":
                     start = time()
                     p.map(primo, datos)
                     tiempo = 1000 * (time() - start)
-                resultado = [trabajadores, replica, tiempo]
+                resultado = [trabajadores, replica, tiempo,]
                 data.append(resultado)
-                    
-datos = pd.DataFrame(data, columns = ['replica','trabajadores','tiempo'])
-print(datos.head())
+    datos = pd.DataFrame(data, columns = ['replica','trabajadores','tiempo'])                
+
+
+plt.boxplot([datos['replica']],[datos['tiempo'])
+plt.show()
 
                         
 
