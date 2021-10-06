@@ -1,19 +1,27 @@
-from math import sqrt, ceil
+from math import sqrt
+from random import randint
 from multiprocessing import Pool
-from time import time
+import pandas as pd
+import matplotlib.pyplot as plt
+datos = []
+data = []
 
-def primo(n):
-    if n < 4:
-        return True
-    if n % 2 == 0:
-        return False
-    for d in range(3, int(ceil(sqrt(n)))):
-        if n % d == 0:
-            return False
-    return True
+
+
+muchos = 2000000
+interior = 0
 
 if __name__ == "__main__":
-    antes = time()
-    with Pool() as p:
-        print(sum(p.map(primo, range(1, 100001))))
-    print(f'Tardamos{time() - antes}')
+    with Pool(3) as p:
+
+        for r in range(muchos): 
+            x = randint(-2000, 2000)
+            y = randint(-2000, 2000)
+            d = sqrt(x*x + y*y)
+            if (d < 2000):
+                interior = interior + 1
+                tasa = interior / muchos
+                pi = 4 * tasa
+        data.append(pi)
+        datos = pd.DataFrame(data, columns = 'replicas') 
+print(pi)
