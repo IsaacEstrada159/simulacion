@@ -25,7 +25,7 @@ for i in range(n):
         z[i, j] = g(x, y)
         valores.append(g(x, y))
 
-tmax=5
+tmax=3
 for a in range(51, 100, 10):
 
     resultados = pd.DataFrame()
@@ -111,12 +111,17 @@ for a in range(51, 100, 10):
                 t = range(0, n, 5)
                 l = ['{:.1f}'.format(low + i * step) for i in t]
                 fig, ax = plt.subplots(figsize=(7, 7), ncols=1)
-                pos = ax.imshow(z) 
+                pos = ax.imshow(z)
+                   
+                plt.xlabel('x')
+                plt.ylabel('y')
+                 
                 for k in range(a):
                     r = agentes.iloc[k]
                     x= ((n-1)/2)-(r.x/step)
                     y= ((n-1)/2)+(r.y/step)     
                     ax.plot(y, x, 'ro')
+                fig.suptitle('Paso {:d}'.format(a + 1)) 
                 ax.plot(y, x, 'go')
                 plt.xticks(t, l)
                 plt.yticks(t, l[::-1]) # arriba-abajo
