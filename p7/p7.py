@@ -14,7 +14,7 @@ p = np.arange(low, high, step)
 n = len(p)
 z = np.zeros((n, n), dtype=float)
 valores=[]
-paso = 0.5
+paso = 0.2
 
 digitos = floor(log(100, 50)) + 1
 guardar = 0
@@ -25,11 +25,11 @@ for i in range(n):
         z[i, j] = g(x, y)
         valores.append(g(x, y))
 
-tmax=3
-for a in range(51, 100, 10):
+tmax=20
+for a in range(35, 40, 10):
 
     resultados = pd.DataFrame()
-    for tiem in range(2, 5):
+    for tiem in range(2, 6):
         agentes =  pd.DataFrame()
         agentes['x'] = [uniform(low, high) for i in range(a)]
         agentes['y'] = [uniform(low, high) for i in range(a)]
@@ -109,10 +109,9 @@ for a in range(51, 100, 10):
             
             if guardar == 0:
                 t = range(0, n, 5)
-                l = ['{:.1f}'.format(low + i * step) for i in t]
-                fig, ax = plt.subplots(figsize=(7, 7), ncols=1)
+                fig, ax = plt.subplots(figsize=(5, 4), ncols=1)
                 pos = ax.imshow(z)
-                   
+                l = ['{:.1f}'.format(low + i * step) for i in t]   
                 plt.xlabel('x')
                 plt.ylabel('y')
                  
@@ -121,7 +120,9 @@ for a in range(51, 100, 10):
                     x= ((n-1)/2)-(r.x/step)
                     y= ((n-1)/2)+(r.y/step)     
                     ax.plot(y, x, 'ro')
-                fig.suptitle('Paso {:d}'.format(a + 1)) 
+
+
+                    
                 ax.plot(y, x, 'go')
                 plt.xticks(t, l)
                 plt.yticks(t, l[::-1]) # arriba-abajo
@@ -132,6 +133,5 @@ for a in range(51, 100, 10):
                 
         guardar = 1
         resultados[(str(a)+' con ' +str(tmax**tiem))] = agentes['best']
-        print(tmax**tiem)
-        
-    resultados.to_csv('resultados_{:d}.csv'.format(a))
+        print(resultados)
+        resultados.to_csv('resultados_{:d}.csv'.format(a))
