@@ -2,8 +2,8 @@
 import numpy as np
 from random import randint
  
-k = 1000
-n = 100000
+k = 100
+n = 10000
 eps = 0.000001
 cumulos = np.random.normal(size = k)
 cumulos -= min(cumulos)

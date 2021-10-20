@@ -50,11 +50,11 @@ def filtro(cumulos, c, n):
     porcentaje = (sum(cum)*100)/n
     return porcentaje
 
-eps = 0.3
-k = 10000
-ns = [10000,30000,60000,100000]
+eps = 0.0001
+k = 100
+ns = [100000]
 
-replica = 15
+replica = 20
 for n in ns: 
     porct = []
     for r in range(replica):
@@ -72,13 +72,13 @@ for n in ns:
             if cambio > 0 or (cambio < 0 and cumulos[p] > 0): # sin vaciar
                 cumulos[p] += cambio
                 diferencia -= cambio
-        assert (all([c != 0 for c in cumulos])) 
+        assert (all([c != 1 for c in cumulos])) 
         assert sum(cumulos) == n
          
         c = np.median(cumulos) # tamaño crítico de cúmulos
         d = np.std(cumulos) / 4 # factor arbitrario para suavizar la curva
          
-        duracion = 15 
+        duracion = 20 
         digitos = floor(log(duracion, 10)) + 1
 
         for paso in range(duracion):
@@ -86,7 +86,7 @@ for n in ns:
                 porc.append(0)
             else:
                 assert sum(cumulos) == n
-                assert (all([c > 0 for c in cumulos])) 
+                assert (all([c > 1 for c in cumulos])) 
                 (tams, freqs) = np.unique(cumulos, return_counts = True)
                 cumulos = []
                 assert len(tams) == len(freqs)

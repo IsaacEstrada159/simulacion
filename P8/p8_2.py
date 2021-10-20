@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Apr 15 16:22:59 2021
-
-@author: denis
-"""
 
 import numpy as np
 from random import randint, random
@@ -11,7 +5,9 @@ from numpy.random import shuffle
 import matplotlib.pyplot as plt
 from math import exp, floor, log
 
-
+eps = 0.1
+k = 100
+ns = [100,200,400]
 
 def rotura(x, c, d):
     return 1 / (1 + exp((c - x) / d))
@@ -55,9 +51,7 @@ def filtro(cumulos, c, n):
     porcentaje = (sum(cum)*100)/n
     return porcentaje
 
-eps = 0.1
-k = 100
-ns = [100,200,400]
+
 
 replica = 5
 for n in ns: 
