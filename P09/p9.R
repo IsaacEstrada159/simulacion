@@ -1,25 +1,23 @@
-#Práctica 9: interacciones entre partículas. Código base en Ref. [1,3].
-
 library(ggplot2)
 library(psych)
 
-n <- 40
+n <- 20
 p <- data.frame(x = rnorm(n), y=rnorm(n), c=rnorm(n), m=rnorm(n))
 xmax <- max(p$x)
 xmin <- min(p$x)
-p$x <- (p$x - xmin) / (xmax - xmin) # ahora son de 0 a 1
+p$x <- (p$x - xmin) / (xmax - xmin) 
 ymax <- max(p$y)
 ymin <- min(p$y)
-p$y <- (p$y - ymin) / (ymax - ymin)  # las y tambien
+p$y <- (p$y - ymin) / (ymax - ymin)  
 cmax <- max(p$c)
 cmin <- min(p$c)
-p$c <- 2 * (p$c - cmin) / (cmax - cmin) - 1 # cargas son entre -1 y 1
+p$c <- 2 * (p$c - cmin) / (cmax - cmin) - 1 
 
 mmax=max(p$m)
 mmin=min(p$m)
-p$m=(p$m-mmin)/(mmax-mmin)+1 #Para obtener masas entre 0.1 y 1, no hay masas cero.
+p$m=(p$m-mmin)/(mmax-mmin)+1 
 
-p$g <- round(5 * p$c) # coloreamos segun la carga a 11 niveles de -5 a 5
+p$g <- round(5 * p$c) 
 paso <- floor(256 / 10)
 niveles <- seq(0, 255, paso)
 colores <- rgb(niveles, rep(0, 11), rev(niveles), max=255)
@@ -28,7 +26,7 @@ fuerza <- function(i) {
   xi <- p[i,]$x
   yi <- p[i,]$y
   ci <- p[i,]$c
-  mi=p[i,]$m * 800 #Se agregó la masa
+  mi=p[i,]$m * 800 
   fx <- 0
   fy <- 0
   for (j in 1:n) {
@@ -40,11 +38,11 @@ fuerza <- function(i) {
     fx <- fx - dx * factor
     fy <- fy - dy * factor
   }
-  return(c(fx, fy)/(mi*200)) #Interacción de la masa con la fuerza de las partículas
+  return(c(fx, fy)/(mi*200)) 
 }
 suppressMessages(library(doParallel))
 registerDoParallel(makeCluster(detectCores() - 1))
-system("rm -f p9_t*.png") # borramos anteriores (requiere bash)
+system("rm -f p9_t*.png") 
 tmax <- 40
 digitos <- floor(log(tmax, 10)) + 1
 tl <- "0"
@@ -71,7 +69,7 @@ for (iter in 1:tmax) {
     scale_shape_discrete(name  ="Payer")+ 
     scale_colour_discrete(name  ="Payer", labels=seq(-5,5 ))
   graphics.off()
-  #Resultados
+
 
 }
 stopImplicitCluster()
