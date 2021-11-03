@@ -43,7 +43,7 @@ fuerza <- function(i) {
 suppressMessages(library(doParallel))
 registerDoParallel(makeCluster(detectCores() - 1))
 system("rm -f p9_t*.png") 
-tmax <- 40
+tmax <- 100
 digitos <- floor(log(tmax, 10)) + 1
 tl <- "0"
 while (nchar(tl) < digitos) {
@@ -70,7 +70,16 @@ for (iter in 1:tmax) {
     scale_colour_discrete(name  ="Payer", labels=seq(-5,5 ))
   graphics.off()
 
-
+  png(paste("p9_mat", tl, ".png", sep=""))
+  pairs.panels(p[,c(1:4,6)], 
+               main=paste("Paso ", tl, sep=""),
+               method = "pearson", 
+               hist.col = "purple",
+               density = TRUE,  
+               ellipses = FALSE,
+               stars=TRUE,
+               labels=c("Posición en x","Posición en y","Carga","Masa","Velocidad"))
+  graphics.off()
 }
 stopImplicitCluster()
 
