@@ -305,6 +305,8 @@ if __name__ == '__main__':
 c = 'red'
 data = [s, s2, s3, s4, s4, s6, s7]       
 plt.boxplot(data, patch_artist=True, boxprops=dict(facecolor=c, color=c))
+plt.ylabel('Sumatoria de digitos negados')
+plt.xlabel('Criterios \n variando la probabilidad de generación de dígitos\nReplicas = 25', loc = 'center')
 plt.savefig('figurap1.png', dpi = 400)
 plt.show()
 
