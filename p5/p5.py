@@ -64,22 +64,15 @@ if __name__ == "__main__":
             if num[0] == wolf[0] and num[1] == wolf[1] and num[2] == wolf[2] and num[3] == wolf[3] and num[4] == wolf[4] and num[5] == wolf[5] and num[6] == wolf[6] and num[7] == wolf[7] and num[8] == wolf[8] : # 7mo Decimal
                 siete = siete + 1
         primero.append(uno)
-        segundo.append(dos)
-        tercero.append(tres)
-        cuarto.append(cuatro)
-        quinto.append(cinco)
-        sexto.append(seis)
-        septimo.append(siete)
-    print(primero)
-    print(segundo)
-    print(tercero)
-    print(cuarto)
-    print(quinto)
-    print(sexto)
-    print(septimo)
-    c = 'red'
-    #data = [[primero[1]],[primero[2]],[primero[3]],[primero[4]]]
-    #plt.boxplot(data,patch_artist=True, boxprops=dict(facecolor=c, color=c))
-    #ax = sns.violinplot(data=primero, scale='count', inner="box"  ,cut = 0)
-    plt.savefig('figurap5.png', dpi = 400)
-    plt.show()
+        primero.append(dos)
+        primero.append(tres)
+        primero.append(cuatro)
+        primero.append(cinco)
+        primero.append(seis)
+        primero.append(siete)
+        primero = list(primero)
+        print(primero)
+        data = {'muestra 1':[primero], 'decimales':[1, 2, 3, 4, 5, 6, 7]}
+        df = pd.DataFrame(data)
+    print(df)
+

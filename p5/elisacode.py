@@ -195,8 +195,8 @@ if __name__ == "__main__":
     print(tercero)
     print(cuarto)
     c = 'red'
-    data = [primero, segundo, tercero, cuarto]
+    grafica = [primero, segundo, tercero, cuarto]
     #plt.boxplot(data,patch_artist=True, boxprops=dict(facecolor=c, color=c))
-    ax = sns.violinplot(data=data, scale='count', inner="box"  ,cut = 0)
+    ax = sns.violinplot(data=grafica, scale='count', inner="box"  ,cut = 0)
     plt.savefig('figurap5.png', dpi = 400)
     plt.show()
