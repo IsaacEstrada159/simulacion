@@ -1,7 +1,7 @@
 from math import exp, pi
 import numpy as np
 import matplotlib.pyplot as plt
-
+import pandas as pd
 import seaborn as sns
 
 
@@ -17,7 +17,7 @@ from GeneralRandom import GeneralRandom
 generador = GeneralRandom(np.asarray(X), np.asarray(Y))
 desde = 3
 hasta = 7
-pedazo = 100
+pedazo = 1000
 cuantos = 500
 def parte(replica):
     V = generador.random(pedazo)[0]
@@ -29,21 +29,22 @@ cuarto = []
 quinto = []
 sexto = []
 septimpo = []
-
-
+replica = 1000
+data = []
 import multiprocessing
 if __name__ == "__main__":
     with multiprocessing.Pool() as pool:
-        uno = 0
-        dos = 0
-        tres = 0
-        cuatro = 0
-        cinco = 0
-        seis = 0
-        siete = 0
-        for t in range(1, 100):
-            montecarlo = pool.map(parte, range(100))
-            integral = sum(montecarlo) / (100 * pedazo)
+        for t in range(1, replica):
+            uno = 0
+            dos = 0
+            tres = 0
+            cuatro = 0
+            cinco = 0
+            seis = 0
+            siete = 0
+
+            montecarlo = pool.map(parte, range(1000))
+            integral = sum(montecarlo) / (1000 * pedazo)
             numn = (pi / 2) * integral
             num = str(numn)
             #print(numn)
@@ -69,6 +70,13 @@ if __name__ == "__main__":
             primero.append(cinco)
             primero.append(seis)
             primero.append(siete)
+            decimales = uno + dos + tres + cuatro + cinco + seis + siete
+            resultados = decimales
+            data.append(resultados)
+        #datos = pd.DataFrame(data, columns = ['replica', 'decimales'])
+        plt.boxplot(data)
+        plt.show()
+        print(data)
 
 
         uno = 0
@@ -81,7 +89,7 @@ if __name__ == "__main__":
 
 
 
-        for t in range(1, 100):
+        for t in range(1, 50):
             montecarlo = pool.map(parte, range(1000))
             integral = sum(montecarlo) / (1000 * pedazo)
             numn = (pi / 2) * integral
@@ -122,12 +130,13 @@ if __name__ == "__main__":
 
 
 
-        for t in range(1, 100):
+        for t in range(1, 50):
             montecarlo = pool.map(parte, range(10000))
             integral = sum(montecarlo) / (10000 * pedazo)
             numn = (pi / 2) * integral
             num = str(numn)
             #print(numn)
+            replica = 0 
             if num[0] == wolf[0] and num[1] == wolf[1] and num[2] == wolf[2]: # 1er Decimal
                 
                 uno = uno + 1
@@ -150,6 +159,7 @@ if __name__ == "__main__":
             tercero.append(cinco)
             tercero.append(seis)
             tercero.append(siete)
+            replica += 1
 
 
 
@@ -163,7 +173,7 @@ if __name__ == "__main__":
 
 
 
-        for t in range(1, 100):
+        for t in range(1, 50):
             montecarlo = pool.map(parte, range(100000))
             integral = sum(montecarlo) / (100000 * pedazo)
             numn = (pi / 2) * integral
@@ -190,13 +200,7 @@ if __name__ == "__main__":
             cuarto.append(cinco)
             cuarto.append(seis)
             cuarto.append(siete)
-    print(primero)
-    print(segundo)
-    print(tercero)
-    print(cuarto)
-    c = 'red'
-    grafica = [primero, segundo, tercero, cuarto]
-    #plt.boxplot(data,patch_artist=True, boxprops=dict(facecolor=c, color=c))
-    ax = sns.violinplot(data=grafica, scale='count', inner="box"  ,cut = 0)
-    plt.savefig('figurap5.png', dpi = 400)
-    plt.show()
+
+    print(df)
+   
+
